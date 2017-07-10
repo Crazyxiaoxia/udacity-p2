@@ -399,25 +399,6 @@ var pizzaElementGenerator = function(i) {
 var resizePizzas = function(size) {
   window.performance.mark("mark_start_resize");   // User Timing API 函数
 
-  // 改变滑窗前披萨的尺寸值
-  function changeSliderLabel(size) {
-    switch(size) {
-      case "1":
-        document.querySelector("#pizzaSize").innerHTML = "Small";
-        return;
-      case "2":
-        document.querySelector("#pizzaSize").innerHTML = "Medium";
-        return;
-      case "3":
-        document.querySelector("#pizzaSize").innerHTML = "Large";
-        return;
-      default:
-        console.log("bug in changeSliderLabel");
-    }
-  }
-
-  changeSliderLabel(size);
-
    // 返回不同的尺寸以将披萨元素由一个尺寸改成另一个尺寸。由changePizzaSlices(size)函数调用
   function determineDx (elem, size) {
     var oldWidth = elem.offsetWidth;
@@ -466,7 +447,8 @@ var resizePizzas = function(size) {
           default:
 
       }
-      var randomPizzas = document.querySelectorAll('.randomPizzaContainer');
+      //var randomPizzas = document.querySelectorAll('.randomPizzaContainer');
+     var randomPizzas= document.getElementsByClassName('randomPizzaContainer');
       for (var i = 0; i < randomPizzas.length; i++) {
           randomPizzas[i].style.width = newwidth + '%';
       }
@@ -540,7 +522,7 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 48; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";

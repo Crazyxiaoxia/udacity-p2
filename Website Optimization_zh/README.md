@@ -78,7 +78,7 @@ function updatePositions() {
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 ```
-2.继续使用性能分析工具查看卡顿位置，发现 函数determinDx()函数重复 layout 操作，导致的卡顿，将
+2.继续使用性能分析工具查看卡顿位置，发现 函数determinDx()函数重复 layout 操作，导致的卡顿，将代码优化为以下；
 ```javascript
 function changePizzaSizes(size) {
 /*
@@ -108,4 +108,13 @@ function changePizzaSizes(size) {
   }
 ``
 
-#### piz
+#### pizza.html
+1. 使用gulp优化CSS样式，并将CSS内联，减少请求次数；
+2. 缩减css的资源大小，删除不必要的字节，提高解析和执行速度； 
+3. 对图片进行无损压缩，节省数据字节空间，加快首屏加载时间;
+
+#### PageSpeed Insights 得分情况
+1.移动端得分情况；
+![image](http://note.youdao.com/noteshare?id=84dbab6535cb79b195bc71870ebb01b8&sub=04CA6C3E6AB64BC396AFE392D45CE6F9)
+2.PC端得分情况
+![image](http://note.youdao.com/noteshare?id=f3c07752a2c6579ed2dfda639c4ec267&sub=BD7FC842E827477BABB7428191D2EA0D)

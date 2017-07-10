@@ -115,6 +115,7 @@ function changePizzaSizes(size) {
 
 #### PageSpeed Insights 得分情况
 1.移动端得分情况；
-![image](http://note.youdao.com/noteshare?id=84dbab6535cb79b195bc71870ebb01b8&sub=04CA6C3E6AB64BC396AFE392D45CE6F9)
+1.移动端得分情况；
+![image](https://github.com/ShoutangYang/udacity-p2/blob/master/Website%20Optimization_zh/img/mobile-score.JPG)
 2.PC端得分情况
-![image](http://note.youdao.com/noteshare?id=f3c07752a2c6579ed2dfda639c4ec267&sub=BD7FC842E827477BABB7428191D2EA0D)
+![image](https://github.com/ShoutangYang/udacity-p2/blob/master/Website%20Optimization_zh/img/computer-score.JPG)
